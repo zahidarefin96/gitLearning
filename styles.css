@@ -1,0 +1,44 @@
+body {
+    background-color: #ff4c68;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial;
+  }
+
+h3{
+    color: white;
+    font-size: 20px;
+}
+
+.list{
+    line-height: 1.5;
+}
+
+.top_container h2 {
+    color: white;
+    font-size: 30px;
+}
+
+/* .middle_container h3{
+    color: white;
+    font-size: 20px;
+} */
+
+/* .ingredients_list{
+    line-height: 1.5;
+} */
+
+/* .bottom_container h3{
+    color: white;
+    font-size: 20px;
+} */
+
+/* .instructions_list{
+    line-height: 1.5;
+} */
+
+.footer-icon{
+    color: white;
+}
+
+.social-icon {
+    margin: 15px 10px;
+  }
