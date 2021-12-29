@@ -6,7 +6,7 @@ Example: entered number is 34560, then 3 digits will be even (4, 6, and 0) and 2
 
 """
 
-# O(n^2)
+# O(n)
 a = int(input('Input your number: '))
 
 even = 0
