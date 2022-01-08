@@ -6,20 +6,39 @@ The string 'aabcde' contains duplicate characters and should return False.
 """
 
 
+# def uniqueCharacters(str):
+#     return len(set(str)) == len(str)
+
+# test_str = "aabcde"
+
+# test_str_positive = "abcde"
+# test_str_negative = "aabcde"
+#
+# print(test_str_positive)
+# print(uniqueCharacters(test_str_positive))
+#
+# print(test_str_negative)
+# print(uniqueCharacters(test_str_negative))
+
+# O(n) --> n represents the number of characters
 def uniqueCharacters(str):
-    # same characters, return false
-    for i in range(len(str)):
-        for j in range(i + 1, len(str)):
-            if (str[i] == str[j]):
-                return False
-    # If no duplicate characters, return true
+    if len(str) == 1:
+        return True
+
+    chars = set()
+    for char in str:
+        if char in chars:
+            return False
+        else:
+            chars.add(char)
     return True
 
 
-# Driver Code
-test_str = "aabcde"
+test_str_positive = "abcde"
+test_str_negative = "aabcde"
 
-if (uniqueCharacters(test_str)):
-    print(f"The String", test_str, "has all unique characters")
-else:
-    print("The String", test_str, "contains duplicate characters")
+print(test_str_positive)
+print(uniqueCharacters(test_str_positive))
+
+print(test_str_negative)
+print(uniqueCharacters(test_str_negative))

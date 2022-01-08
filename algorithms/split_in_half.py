@@ -5,21 +5,25 @@ If the string has odd characters, the first part should be one character greater
 Example: string = 'bbbbbcaaaaa'. Result = ‘aaaaabbbbbc’.
 """
 
-test_str = "bbbbbcaaaaa"
 
-print("The original string is: " + test_str)
+# O(1)
+def split_in_half(s):
+    length = len(s)
+    half = length // 2
+    add = 0
+    if length % 2:
+        add = 1
+    left = s[:half + add]
+    right = s[half + add:]
 
-n = 6
-chunks = [test_str[i:i + n]
-          for i in range(0, len(test_str), n)]
-print(chunks)
+    return right + left
 
-a = chunks[0]
-b = chunks[1]
 
-temp = a
-a = b
-b = temp
+test_str_odd = "aaabccc"
+test_str_even = "aaabbb"
 
-print(f'after swap:', a, b)
-print(f'Final result:', a + b)
+print(f'original:', test_str_odd)
+print(f'after:', split_in_half(test_str_odd))
+
+print(f'original:', test_str_even)
+print(f'after:', split_in_half(test_str_even))
