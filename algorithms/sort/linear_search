@@ -1,0 +1,12 @@
+# O(n) -> linear time complexity
+def linear_search(arr, k):
+    for i in range(len(arr)):
+        if arr[i] == k:
+            return i
+    return -1
+
+
+test_arr = [1, 6, 2, 1, 9, 45, 54, 2, 7, 8]
+print(test_arr)
+print(linear_search(test_arr, 7))  # 8
+print(linear_search(test_arr, 99))  # -1
